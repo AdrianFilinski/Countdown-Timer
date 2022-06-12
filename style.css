@@ -2,11 +2,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    --smaller: 12px;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
-h1 {
+.headline {
     font-weight: normal;
     letter-spacing: .125rem;
     text-transform: uppercase;
@@ -28,4 +32,18 @@ li span {
 .emoji {
     display: none;
     padding: 1rem;
+}
+
+@media all and (max-width: 768px) {
+    .headline {
+        font-size: calc(1.5rem * var(--smaller));
+    }
+
+    li {
+        font-size: calc(1.125rem * var(--smaller));
+    }
+
+    li span {
+        font-size: calc(3.375rem * var(--smaller));
+    }
 }
